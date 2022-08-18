@@ -13,7 +13,6 @@ Dagger Hilt is preferred for dependency injection.
 Dagger Hilt (for dependency injection)    
 Retrofit + Gson (to pull data and API operations)    
 Room (to save favorite movies in device with local database)      
-Lifecycle Extensions (to take advantage of lifecycle elements)  
 View Binding (to provide easier access to view objects)  
 Lifecycle Extensions (to take advantage of lifecycle elements)
 Navigation (to switch between fragments)    
