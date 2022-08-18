@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/spaceShipFragment">
+
+    <fragment
+        android:id="@+id/stationsFragment"
+        android:name="com.myusufcil.androidbase.ui.pages.stations.StationsFragment"
+        tools:layout="@layout/fragment_stations" />
+    <fragment
+        android:id="@+id/spaceShipFragment"
+        android:name="com.myusufcil.androidbase.ui.pages.spaceship.SpaceShipFragment"
+        tools:layout="@layout/fragment_space_ship">
+
+        <action
+            android:id="@+id/action_spaceShipFragment_to_stationFragment"
+            app:destination="@id/stationsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.myusufcil.androidbase.ui.pages.favorites.FavoritesFragment"
+        tools:layout="@layout/fragment_favorites" />
+
+</navigation>

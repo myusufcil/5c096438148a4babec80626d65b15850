@@ -1,0 +1,105 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+}
+
+android {
+    compileSdk versions.compileSdk
+
+    defaultConfig {
+        minSdk versions.minSdk
+        targetSdk versions.targetSdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    buildTypes {
+        getByName("release") {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField 'String', 'BASE_URL', '"https://api.spacexdata.com/v3/"'
+        }
+
+        getByName("debug") {
+            minifyEnabled false
+            debuggable true
+
+            buildConfigField 'String', 'BASE_URL', '"https://api.spacexdata.com/v3/"'
+        }
+    }
+    compileOptions {
+        sourceCompatibility versions.sourceCompat
+        targetCompatibility versions.targetCompat
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    api project(':data')
+
+    api deps.hilt.hilt
+    api deps.hilt.lifecycleExtension
+
+    api deps.reactivex.rxJava
+    api deps.reactivex.rxKotlin
+    api deps.reactivex.rxBinding
+    api deps.reactivex.rxAndroid
+
+    api deps.dagger.dagger
+    api deps.dagger.daggerSupport
+
+    api deps.androidx.core
+    api deps.androidx.appcompat
+    api deps.androidx.constraintlayout
+    api deps.androidx.fragment
+    api deps.androidx.stdlib
+    api deps.androidx.navGraphFragment
+    api deps.androidx.navGraphUi
+    api deps.androidx.navDynamic
+    api deps.androidx.roomRx
+    /*api deps.androidx.roomCompiler*/
+    api deps.androidx.roomGuava
+    api deps.androidx.roomRuntime
+    api deps.androidx.roomktx
+    api deps.androidx.roomRx3
+    api deps.androidx.roomGuava
+
+    kapt "androidx.room:room-compiler:2.4.3"
+
+    api deps.google.material
+    api deps.google.gson
+
+    api deps.square.retrofit
+    api deps.square.gsonConverter
+    api deps.square.okhttp
+    api deps.square.picasso
+    api deps.square.okhttpDownloader
+    api deps.square.retrofitRxAdapter
+    api deps.square.retrofitIntecepter
+    api deps.square.urlconnection
+    api deps.square.timber
+
+    api deps.viewBinding
+    api deps.glide
+
+    kapt deps.dagger.daggerProcessor
+    kapt deps.dagger.daggerAndroidProcessor
+    kapt deps.hilt.hiltCompiler
+    kapt deps.androidx.roomKapt
+
+    testApi deps.test.junit
+    testApi deps.test.extJunit
+    testApi deps.test.espressoCore
+    testApi deps.test.navTesting
+}

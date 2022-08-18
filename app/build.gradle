@@ -1,0 +1,77 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-parcelize'
+}
+
+android {
+    compileSdk versions.compileSdk
+
+    defaultConfig {
+        applicationId "com.myusufcil.androidbase"
+        minSdk versions.minSdk
+        targetSdk versions.targetSdk
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("./doc/android_base.keystore")
+            storePassword "androidbase"
+            keyAlias "android_base"
+            keyPassword "androidbase"
+        }
+        release {
+            storeFile file("./doc/android_base.keystore")
+            storePassword "androidbase"
+            keyAlias "android_base"
+            keyPassword "androidbase"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
+            signingConfig signingConfigs.debug
+        }
+    }
+    compileOptions {
+        sourceCompatibility versions.sourceCompat
+        targetCompatibility versions.targetCompat
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+}
+
+dependencies {
+    api project(':component')
+    api project(':core')
+    api project(':data')
+
+    api deps.hilt.hilt
+    api deps.glide
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    kapt "androidx.room:room-compiler:2.4.3"
+
+    kapt deps.dagger.daggerProcessor
+    kapt 'com.github.bumptech.glide:compiler:4.13.0'
+    kapt deps.dagger.daggerAndroidProcessor
+    kapt deps.hilt.hiltCompiler
+
+    testApi deps.test.junit
+}

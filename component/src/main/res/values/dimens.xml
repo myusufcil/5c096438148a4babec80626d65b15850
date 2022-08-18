@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <dimen name="material_0.2dp">0.2dp</dimen>
+    <dimen name="material_0.4dp">0.4dp</dimen>
+    <dimen name="material_0.6dp">0.6dp</dimen>
+    <dimen name="material_0.8dp">0.8dp</dimen>
+    <dimen name="material_1dp">1dp</dimen>
+    <dimen name="material_2dp">2dp</dimen>
+    <dimen name="material_4dp">4dp</dimen>
+    <dimen name="material_8dp">8dp</dimen>
+    <dimen name="material_10dp">10dp</dimen>
+    <dimen name="material_12dp">12dp</dimen>
+    <dimen name="material_16dp">16dp</dimen>
+    <dimen name="material_20dp">20dp</dimen>
+    <dimen name="material_24dp">24dp</dimen>
+    <dimen name="material_28dp">28dp</dimen>
+    <dimen name="material_32dp">32dp</dimen>
+    <dimen name="material_36dp">36dp</dimen>
+    <dimen name="material_40dp">40dp</dimen>
+    <dimen name="material_44dp">44dp</dimen>
+    <dimen name="material_48dp">48dp</dimen>
+    <dimen name="material_52dp">52dp</dimen>
+    <dimen name="material_56dp">56dp</dimen>
+    <dimen name="material_60dp">60dp</dimen>
+    <dimen name="material_64dp">64dp</dimen>
+    <dimen name="material_68dp">68dp</dimen>
+    <dimen name="material_72dp">72dp</dimen>
+
+
+    <!-- Typography -->
+    <dimen name="material_11dp">11sp</dimen>
+    <dimen name="material_12sp">12sp</dimen>
+    <dimen name="material_13sp">13sp</dimen>
+    <dimen name="material_14sp">14sp</dimen>
+    <dimen name="material_16sp">16sp</dimen>
+    <dimen name="material_18sp">18sp</dimen>
+    <dimen name="material_20sp">20sp</dimen>
+    <dimen name="material_22sp">22sp</dimen>
+    <dimen name="material_24sp">24sp</dimen>
+    <dimen name="material_34sp">34sp</dimen>
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/stationsFragment"
+        android:icon="@drawable/ic_space_ship"
+        android:title="Stations" />
+    <item
+        android:id="@+id/favoritesFragment"
+        android:icon="@drawable/ic_star_filled"
+        android:title="Favorites" />
+
+</menu>

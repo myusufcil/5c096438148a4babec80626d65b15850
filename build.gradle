@@ -1,0 +1,146 @@
+buildscript {
+    ext {
+        kotlin_version = '1.5.31'
+    }
+
+    ext.versions = [
+            sourceCompat            : JavaVersion.VERSION_11,
+            targetCompat            : JavaVersion.VERSION_11,
+            'kotlin'                : '1.5.31',
+            'kotlinGradlePlugin'    : '1.5.31',
+            'androidBuildGradle'    : '7.0.3',
+            'minSdk'                : 21,
+            'compileSdk'            : 31,
+            'targetSdk'             : 31,
+
+            // hilt
+            'hilt'                  : '2.42',
+            'lifecycleExtension'    : '2.2.0',
+
+            //room
+            'room'                  : '2.4.3',
+            'roomPersistence'       : '1.1.1',
+            'glide'                 : '4.13.1',
+
+            // rx
+            'rxJava'                : '2.2.8',
+            'rxAndroid'             : '2.1.1',
+            'rxBinding'             : '3.0.0-alpha2',
+            'rxKotlin'              : '2.3.0',
+            'rxRelay'               : '2.1.0',
+
+            // dagger
+            'dagger'                : '2.40',
+            'daggerSupport'         : '2.40',
+            'daggerProcessor'       : '2.40',
+            'daggerAndroidProcessor': '2.40',
+
+            // androidx
+            'core'                  : '1.7.0',
+            'appcompat'             : '1.3.1',
+            'constraintlayout'      : '2.1.1',
+            'fragment'              : '1.3.6',
+            'parcelize'             : '1.4.20',
+            'navGraph'              : '2.3.5',
+
+            // google
+            'material'              : '1.4.0',
+
+            // test
+            'junit'                 : '4.13.2',
+            'extJunit'              : '1.1.3',
+            'espressoCore'          : '3.4.0',
+
+            // square
+            'retrofit'              : '2.9.0',
+            'okhttp'                : '4.9.0',
+            'okhttpDownloader'      : '1.1.0',
+            'picasso'               : '2.71828',
+            'retrofitRxAdapter'     : '2.9.0',
+            'timber'                : '5.0.1',
+            'gson'                  : '2.8.9',
+
+            // viewBinding
+            'viewBinding'           : '1.5.0-beta01',
+            'lifecycle'             : '2.0.0',
+    ]
+
+    ext.deps = [
+            hilt       : [
+                    'hilt'              : "com.google.dagger:hilt-android:${versions.hilt}",
+                    'hiltCompiler'      : "com.google.dagger:hilt-compiler:${versions.hilt}",
+                    'lifecycleExtension': "androidx.lifecycle:lifecycle-extensions:${versions.lifecycleExtension}",
+                    'hiltGradlePlugin'  : "com.google.dagger:hilt-android-gradle-plugin:${versions.hilt}",
+                    'hiltCompilers'     : "com.google.dagger:hilt-android-compiler:${versions.hilt}"
+            ],
+            reactivex  : [
+                    'rxJava'   : "io.reactivex.rxjava2:rxjava:${versions.rxJava}",
+                    'rxAndroid': "io.reactivex.rxjava2:rxandroid:${versions.rxAndroid}",
+                    'rxRelay'  : "com.jakewharton.rxrelay2:rxrelay:${versions.rxRelay}",
+                    'rxKotlin' : "io.reactivex.rxjava2:rxkotlin:${versions.rxKotlin}",
+                    'rxBinding': "com.jakewharton.rxbinding3:rxbinding:${versions.rxBinding}"
+            ],
+            dagger     : [
+                    'dagger'                : "com.google.dagger:dagger:${versions.dagger}",
+                    'daggerSupport'         : "com.google.dagger:dagger-android-support:${versions.daggerSupport}",
+                    'daggerProcessor'       : "com.google.dagger:dagger-compiler:${versions.daggerProcessor}",
+                    'daggerAndroidProcessor': "com.google.dagger:dagger-android-processor:${versions.daggerAndroidProcessor}",
+            ],
+            androidx   : [
+                    core              : "androidx.core:core-ktx:${versions.core}",
+                    appcompat         : "androidx.appcompat:appcompat:${versions.appcompat}",
+                    constraintlayout  : "androidx.constraintlayout:constraintlayout:${versions.constraintlayout}",
+                    fragment          : "androidx.fragment:fragment-ktx:${versions.fragment}",
+                    androidBuildGradle: "com.android.tools.build:gradle:${versions.androidBuildGradle}",
+                    kotlinGradlePlugin: "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlinGradlePlugin}",
+                    'roomRuntime'     : "androidx.room:room-runtime:${versions.roomPersistence}",
+                    /*'roomCompiler'    : "androidx.room:room-compiler:${versions.room}",*/
+                    'roomRx'          : "androidx.room:room-rxjava2:${versions.room}",
+                    'roomGuava'          : "androidx.room:room-guava:${versions.room}",
+                    'roomRx3'          : "androidx.room:room-rxjava3:${versions.room}",
+                    'roomktx'          : "androidx.room:room-ktx:${versions.room}",
+                    'roomKapt'          : "androidx.room:room-compiler:${versions.room}",
+                    stdlib            : "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}",
+                    'navGraphFragment': "androidx.navigation:navigation-fragment-ktx:${versions.navGraph}",
+                    'navGraphUi'      : "androidx.navigation:navigation-ui-ktx:${versions.navGraph}",
+                    'navDynamic'      : "androidx.navigation:navigation-dynamic-features-fragment:${versions.navGraph}"
+            ],
+            google     : [
+                    material: "com.google.android.material:material:${versions.material}",
+                    'gson'  : "com.google.code.gson:gson:${versions.gson}",
+            ],
+            square     : [
+                    'retrofit'          : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
+                    'gsonConverter'     : "com.squareup.retrofit2:converter-gson:${versions.retrofit}",
+                    'okhttp'            : "com.squareup.okhttp3:okhttp:${versions.okhttp}",
+                    'picasso'           : "com.squareup.picasso:picasso:${versions.picasso}",
+                    'okhttpDownloader'  : "com.jakewharton.picasso:picasso2-okhttp3-downloader:${versions.okhttpDownloader}",
+                    'retrofitRxAdapter' : "com.squareup.retrofit2:adapter-rxjava2:${versions.retrofitRxAdapter}",
+                    'retrofitIntecepter': "com.squareup.okhttp3:logging-interceptor:${versions.okhttp}",
+                    'urlconnection'     : "com.squareup.okhttp3:okhttp-urlconnection:${versions.okhttp}",
+                    'timber'            : "com.jakewharton.timber:timber:${versions.timber}",
+            ],
+            test       : [
+                    junit       : "junit:junit:${versions.junit}",
+                    extJunit    : "androidx.test.ext:junit:${versions.extJunit}",
+                    espressoCore: "androidx.test.espresso:espresso-core:${versions.espressoCore}",
+                    'navTesting': "androidx.navigation:navigation-testing:${versions.navGraph}"
+            ],
+            viewBinding: "com.github.kirich1409:viewbindingpropertydelegate:${versions.viewBinding}",
+            glide      : "com.github.bumptech.glide:glide:${versions.glide}",
+    ]
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath deps.androidx.androidBuildGradle
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21"
+        classpath deps.hilt.hiltGradlePlugin
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

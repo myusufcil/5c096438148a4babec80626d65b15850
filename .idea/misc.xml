@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../../../layout/custom_preview.xml" value="0.14010416666666667" />
+        <entry key="app/src/main/res/drawable/ic_space_ship.xml" value="0.165" />
+        <entry key="app/src/main/res/drawable/ic_warning.xml" value="0.165" />
+        <entry key="app/src/main/res/drawable/searchview_round.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2776268115942029" />
+        <entry key="app/src/main/res/layout/fragment_detail.xml" value="0.2776268115942029" />
+        <entry key="app/src/main/res/layout/fragment_favorites.xml" value="0.2776268115942029" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2776268115942029" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.2776268115942029" />
+        <entry key="app/src/main/res/layout/fragment_space_ship.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_stations.xml" value="0.2776268115942029" />
+        <entry key="app/src/main/res/menu/bottom_main_menu.xml" value="0.3026041666666667" />
+        <entry key="component/src/main/res/drawable/bg_item_stations_btn_radius.xml" value="0.165" />
+        <entry key="component/src/main/res/drawable/bg_item_stations_root_radius.xml" value="0.165" />
+        <entry key="component/src/main/res/drawable/bg_item_stations_root_selected_radius.xml" value="0.165" />
+        <entry key="component/src/main/res/drawable/ic_star.xml" value="0.165" />
+        <entry key="component/src/main/res/layout/item_horizontal_recyclerview.xml" value="0.2776268115942029" />
+        <entry key="component/src/main/res/layout/item_stations_datas.xml" value="0.2776268115942029" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

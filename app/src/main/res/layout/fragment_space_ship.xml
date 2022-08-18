@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPoint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/material_32dp"
+        android:layout_marginRight="@dimen/material_32dp"
+        android:gravity="center"
+        tools:text="Dağıtılacak Puan : 15"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etSpaceShipName"
+        android:layout_width="match_parent"
+        android:hint="Space Ship Name"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/material_32dp"
+        android:layout_marginTop="@dimen/material_32dp"
+        android:layout_marginRight="@dimen/material_32dp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/material_32dp"
+        android:layout_marginTop="@dimen/material_32dp"
+        android:layout_marginRight="@dimen/material_32dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dayanıklılık"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <SeekBar
+                android:id="@+id/sbDurability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/material_4dp"
+                android:layout_weight="8"
+                android:max="15"
+                android:progress="5" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDurabilityValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                tools:text="5"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/material_32dp"
+        android:layout_marginTop="@dimen/material_32dp"
+        android:layout_marginRight="@dimen/material_32dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hız"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <SeekBar
+                android:id="@+id/sbSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/material_4dp"
+                android:layout_weight="8"
+                android:max="15"
+                android:progress="5" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSpeedValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                tools:text="5"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/material_32dp"
+        android:layout_marginTop="@dimen/material_32dp"
+        android:layout_marginRight="@dimen/material_32dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kapasite"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <SeekBar
+                android:id="@+id/sbCapaticy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/material_4dp"
+                android:layout_weight="8"
+                android:max="15"
+                android:progress="5" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCapacityValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                tools:text="5"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/btnOpenHomeActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/material_32dp"
+        android:layout_marginTop="@dimen/material_32dp"
+        android:layout_marginRight="@dimen/material_32dp"
+        android:background="@color/white"
+        android:text="Devam Et"
+        android:textColor="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWarningMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/material_32dp"
+        android:layout_marginTop="@dimen/material_32dp"
+        android:layout_marginRight="@dimen/material_32dp"
+        android:gravity="center"
+        android:visibility="invisible"
+        tools:text="Uyarı Mesjaı"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="italic|bold" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
